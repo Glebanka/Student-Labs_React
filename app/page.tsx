@@ -1,6 +1,6 @@
 'use client'
-import Aphorism from "./Aphorism/aphorism";
-import Sidebar from './Sidebar/sidebar';
+import Aphorism from "./components/Aphorism/aphorism";
+import Sidebar from './components/Sidebar/sidebar';
 
 export default function Home() {
   

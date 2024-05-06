@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import type { Viewport } from 'next';
 import "./globals.css";
-import Header from './Header/header';
-import Sidebar from './Sidebar/sidebar';
+import Header from './components/Header/header';
+import Sidebar from './components/Sidebar/sidebar';
 
 
 export const metadata: Metadata = {
