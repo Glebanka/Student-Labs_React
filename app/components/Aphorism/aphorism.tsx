@@ -1,35 +1,19 @@
-import axios from 'axios';
-import { useState, useEffect} from 'react';
+import Link from "next/link";
 
-interface Aphorism {
+export interface Quote {
   _id: string;
   content: string;
+  author: string;
+  authorSlug: string;
+  tags: string[];
 }
-
-export default function Aphorism(){
-  const [aphorism, setAphorism] = useState<Aphorism[]>([]);
-  
-  useEffect(() => {
-        const loadAphorism = () => {
-          axios.get('https://api.quotable.io/quotes/random?tags=wisdom|famous-quotes')
-            .then(response => {
-              console.log('Афоризм загружен', response.data);
-              setAphorism(response.data);
-            })
-            .catch(error => {
-              console.error('Ошибка загрузки афоризма:', error);
-            });
-        };
-        
-        // Загружаем афоризм после монтирования компонента
-        loadAphorism();
-  }, []);
-
+export default function Aphorism({ note } : { note: Quote }){
   return (
-    <div className="border border-l-0 border-t-0 pb-3 pr-3 rounded-br-xl">
-      {aphorism.map(note => (
-        <div key={note._id}>{note.content}</div>
-      ))}
+    <div className="border border-l-0 border-t-0 pb-3 pr-3 rounded-br-xl flex flex-col gap-2">
+        <div>{note.content}</div>
+        <div >{note.author}</div>
+        {/* добавить иконку сюда */}
+        <div className="self-end">{note.tags.join(', ')}</div>
     </div>
   );
 };
