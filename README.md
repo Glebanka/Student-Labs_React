@@ -15,12 +15,11 @@ TailwindCSS for styles <br/>
 
 #### How to Запустить?
 
+1.
+```bash
+npm install next react react-dom
+```
+2.
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
