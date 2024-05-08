@@ -28,8 +28,8 @@ export default function category(){
   }, [tags]);
 
   return (
-    <div className="contentWrapper">
-      <main className="flex flex-col gap-10 w-4/5">
+    <div className="contentWrapper gap-10">
+      <main className="flex flex-col gap-10 w-full lg:w-4/5">
         <p className='text-4xl'>
             В категории {tags}
         </p>

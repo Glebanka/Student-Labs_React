@@ -6,6 +6,8 @@ import { Quote } from "./components/Aphorism/aphorism";
 import axios from 'axios';
 import { useState, useEffect} from 'react';
 
+//Добавить адаптивную верстку
+//Перепрочитать тз
 
 export default function Home() {
   const [aphorism, setAphorism] = useState<Quote[]>([]);
@@ -25,9 +27,9 @@ export default function Home() {
   }, []);
   
   return (
-    <div className="contentWrapper">
+    <div className="contentWrapper gap-10">
 
-      <main className="flex flex-col gap-10 w-4/5">
+      <main className="flex flex-col gap-10 w-full lg:w-4/5">
         
       {aphorism.map(note => (
         <Aphorism key={note._id} note={note}/>

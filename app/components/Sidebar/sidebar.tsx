@@ -5,7 +5,6 @@ import axios from 'axios';
 export interface Categories {
   _id: string;
   name: string;
-  slug: string;
 }
 
 export default function Sidebar(){
@@ -27,10 +26,10 @@ export default function Sidebar(){
     loadAphorism();
 }, []);
   return (
-    <div className="flex flex-col items-center">
-      <p className='text-xl'>По категориям</p>
+    <div className="flex flex-row flex-wrap lg:gap-0 gap-5 items-center lg:flex-col ">
+      <p className='text-5xl lg:text-xl self-center'>По категориям</p>
         {category.map(category => (
-          <Link key={category._id} href={{ pathname: '/category', query: { tags: category.slug } }}>
+          <Link className='hover:text-gray-400' key={category._id} href={{ pathname: '/category', query: { tags: category.name } }}>
               {category.name}
           </Link>
         ))}

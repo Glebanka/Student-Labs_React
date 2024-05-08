@@ -23,7 +23,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
     
     
     <html lang="en">
-      <body className={podkova.className}>
+      <body className={`${podkova.className} w-full px-10 xl:w-9/12 pb-4`}>
         <Header />
         {children}
       </body>
