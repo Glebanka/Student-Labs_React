@@ -27,7 +27,7 @@ export default function Sidebar(){
 }, []);
   return (
     <div className="flex flex-row flex-wrap lg:gap-0 gap-5 items-center lg:flex-col ">
-      <p className='text-5xl lg:text-xl self-center'>По категориям</p>
+      <p className='text-5xl lg:text-xl'>По категориям</p>
         {category.map(category => (
           <Link className='hover:text-gray-400' key={category._id} href={{ pathname: '/category', query: { tags: category.name } }}>
               {category.name}

@@ -24,7 +24,7 @@ export default function Aphorism({ note } : { note: Quote }){
             <Link className='hover:text-gray-400' key={index} href={{ pathname: '/category', query: { tags: tag } }}>
               {tag}
             </Link>
-            {index < note.tags.length - 1 && '| '}
+            {index < note.tags.length - 1 && '| '}{/* Проверяем меньше ли значение key чем последний элемент массива и тогда ставим '| '*/}
           </React.Fragment>
   ))}</div>
     </div>
