@@ -3,11 +3,9 @@
 ### How it looks?
 
 ### Главная страница
-<br/>
 ![firefox_bUmKwb0RAJ](https://github.com/Glebanka/Student-Labs_React/assets/92989466/c9f8d41c-286b-4a5d-999a-15cac3447327)
 <br/><br/><br/>
 ### Страница для определенной категории 
-<br/> 
 ![firefox_OYoJdfjuQ4](https://github.com/Glebanka/Student-Labs_React/assets/92989466/be83fd51-7577-4ac5-ab95-2743535e19be)
 
 
